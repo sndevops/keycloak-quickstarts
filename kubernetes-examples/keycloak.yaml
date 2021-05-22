@@ -43,11 +43,9 @@ spec:
         ports:
         - name: http
           containerPort: 8080
-          targetPort: 8095
         - name: https
           containerPort: 8443
-          targetPort: 8449
         readinessProbe:
           httpGet:
             path: /auth/realms/master
-            port: 8095
+            port: 8080
