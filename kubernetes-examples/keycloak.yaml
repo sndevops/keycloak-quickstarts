@@ -42,10 +42,10 @@ spec:
           value: "true"
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 8085
         - name: https
           containerPort: 8443
         readinessProbe:
           httpGet:
             path: /auth/realms/master
-            port: 8085
+            port: 8080
