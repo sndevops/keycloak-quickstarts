@@ -12,5 +12,5 @@ spec:
       paths:
       - backend:
           serviceName: keycloak
-          servicePort: 8085
+          servicePort: 8087
 
