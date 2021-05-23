@@ -11,9 +11,13 @@ spec:
       - keycloak.10.0.0.232.nip.io
   rules:
   - host: keycloak.10.0.0.232.nip.io
-    http:
+  - http:
       paths:
-      - backend:
-          serviceName: keycloak
-          servicePort: 8080
+      - path: /testpath
+        pathType: Prefix
+        backend:
+          service:
+            name: keycloak
+            port:
+              number: 8080
 
